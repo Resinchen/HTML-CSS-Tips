@@ -1,0 +1,80 @@
+:root {
+	--primary-color: #2f80ed;
+	--secondary-color: #e0e0e0;
+}
+
+.steps, .step__point {
+	display: flex;
+	justify-content: space-between;
+}
+
+.step {
+	flex: 1;
+	margin-top: auto;
+}
+
+.step__header {
+	text-align: center;
+	margin-top: auto;
+}
+
+.point {
+	min-width: 36px;
+	width: 36px;
+	height: 36px;
+	border-radius: 18px;
+	background-color: var(--secondary-color);
+	transition: background 1s ease;
+}
+
+.active .point {
+	border: 1px solid var(--primary-color);
+}
+
+.done .point {
+	background-color: var(--primary-color);
+}
+
+
+.inactive .point {
+
+}
+
+.pre-line, .post-line {
+	height: 1px;
+	width: 100%;
+	background-color: var(--secondary-color);
+	margin-top: 18px;
+	transition: background 1s ease;
+	
+}
+
+.step:first-child .pre-line, .step:last-child .post-line {
+	visibility: hidden;
+}
+
+.done .pre-line, .done .post-line {
+	background: var(--primary-color);
+}
+
+.active .pre-line {
+	background: var(--primary-color);
+}
+
+/*Forms style*/
+.form {
+	display: none;
+}
+
+.form-active {
+	display: block;
+}
+
+.form-inactive {
+	display: none;
+}
+
+button {
+	height: 34px;
+	padding: 0 25px;
+}
